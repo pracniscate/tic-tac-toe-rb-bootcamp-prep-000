@@ -34,3 +34,9 @@ def position_taken?(board, index)
     true
   end
 end
+
+def valid_move?(board, index)
+  if board[index]
+    return position_taken?(board, index)
+  end
+end
