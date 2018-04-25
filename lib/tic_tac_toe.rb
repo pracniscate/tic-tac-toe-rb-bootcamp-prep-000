@@ -50,3 +50,8 @@ def turn(board)
     turn(board)
   end
 end
+
+def turn_count(board)
+  board.count{|value| value == "X" || value == "O"}
+end
+
