@@ -82,3 +82,30 @@ def won?(board)
   end
   false
 end
+
+def full?(board)
+  if board.any?{|i| i == " "}
+    false
+  else
+    true
+  end
+end
+
+def draw?(board)
+  if !won?(board) && full?(board)
+    true
+  end
+end
+
+def over?(board)
+  if won?(board) || draw?(board)
+    true
+  end
+end
+
+def winner(board)
+  if won?(board)
+    winner = won?(board)
+    return board[winner[0]]
+  end
+end
